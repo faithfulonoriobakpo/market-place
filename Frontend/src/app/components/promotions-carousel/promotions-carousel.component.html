@@ -1,1 +1,16 @@
-<p>promotions-carousel works!</p>
+<ngb-carousel [interval]="2000" [showNavigationArrows] = "showNavigationArrows">
+    <ng-template ngbSlide *ngFor="let image of images">
+        <div [ngStyle]="image.style" [style.display]="'flex'">
+            <div class="info" [ngStyle]="image.infoStyle">
+                <p class="tag">{{image.tag}}</p>
+                <p class="topic">{{image.topic}}</p>
+                <p class="description">{{image.description}}</p>
+                <button>Check this Out</button>
+            </div>
+            <div>
+                <img [src]="image.src" [ngStyle]="image.imgStyle">
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+  

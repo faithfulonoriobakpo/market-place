@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BottomMenuComponent } from './components/bottom-menu/bottom-menu.component';
 import { MiddleMenuComponent } from './components/middle-menu/middle-menu.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductComponent } from './components/product-list/product/product.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -30,7 +30,7 @@ import { RecommendationComponent } from './components/recommendation/recommendat
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
