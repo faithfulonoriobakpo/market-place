@@ -1,0 +1,70 @@
+ngb-carousel {
+    padding: 15px 10px 15px 10px;
+    height: 130px;
+
+    .middle-menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 600px; /* Maximum width of the menu */
+
+        .middle-menu-item {
+            text-decoration: none;
+            display: block;
+            color: grey;
+            padding: 5px 10px 15px 10px;
+            width: calc(20% - 10px); /* Each menu item takes up 20% of the screen width minus 10px for margin */
+            max-width: 110px; /* Maximum width of each menu item */
+            text-align: center;
+
+            &:nth-child(5n) {
+              margin-right: 0; /* Remove the margin on every 5th item to prevent overflow */
+            }
+
+            .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 55px;
+                height: 55px;
+                margin: auto;
+
+                i {
+                    background-color: #f6f6f6;
+                    padding: 12px;
+                    color: rgb(103, 101, 101);
+                    border-radius: 10px;
+                    font-size: 18px;
+                    margin: 5px;
+                }
+            }
+
+            .text {
+                margin-top: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Media query for devices with a width of 280px */
+@media (max-width: 280px) {
+    .middle-menu {
+        max-width: 280px;
+        justify-content: center;
+        flex-wrap: nowrap; /* Prevent items from wrapping */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Add momentum scrolling on iOS */
+    }
+    
+    .middle-menu-item {
+        width: 80px; /* Reduce width of menu items to fit within screen */
+        max-width: none; /* Remove the max-width restriction */
+        margin-right: 5px; /* Add a small margin between menu items */
+    }
+    
+    .middle-menu-item:last-child {
+        margin-right: 0; /* Remove margin from last item */
+    }
+}

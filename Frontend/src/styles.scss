@@ -13,9 +13,12 @@
 .carousel-indicators button.active{
     border-radius: 50% !important;
     width: 12px !important;
-    background-color: black;
+    background-color: black !important;
 }
-.carousel-indicators {
+.carousel-indicators button {
+    background-color: grey !important;
+}
+app-promotions-carousel .carousel-indicators {
     position: absolute;
     top: 100px;
     left: 60% !important;
