@@ -10,7 +10,7 @@ export class PromotionsCarouselComponent {
 
   images = [
     {
-      src: '../../assets/clothes.png',
+      src: '../../assets/images/clothes.png',
       style: {backgroundColor:'#e8ebea', display:'flex', 'align-items': 'flex-end', width:'100%', height:'300px'},
       imgStyle:{height: '120px', 'margin-left': 'auto', width: '220px'},
       infoStyle:{flex: 1,'padding-bottom':'20px','margin-right':'5px', 'font-size': '30px'},
@@ -19,7 +19,7 @@ export class PromotionsCarouselComponent {
       description: 'Discover fashion that suits to your style'
     },
     {
-      src: '../../assets/lotion.png',
+      src: '../../assets/images/lotion.png',
       style: {backgroundColor:'#eae2e2', display:'flex', 'align-items': 'flex-end', width:'100%', height:'300px'},
       imgStyle:{height: '150px', 'margin-left': 'auto', width: '170px'},
       infoStyle:{flex: 1,'padding-bottom':'20px','margin-right':'5px', 'font-size':'20px'},
@@ -28,7 +28,7 @@ export class PromotionsCarouselComponent {
       description: ''
     },
     {
-      src: '../../assets/chaiceness.png',
+      src: '../../assets/images/chaiceness.png',
       style: {backgroundColor:'#daedd8', display:'flex', 'align-items': 'flex-end', width:'100%', height:'300px'},
       imgStyle:{height: '120px', 'margin-left': 'auto', width: '170px'},
       infoStyle:{flex: 1,'padding-bottom':'20px','margin-right':'5px', 'font-size':'20px'},
