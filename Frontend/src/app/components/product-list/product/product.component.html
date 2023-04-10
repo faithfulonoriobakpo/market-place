@@ -1,1 +1,14 @@
-<p>product works!</p>
+<div class="product" [style.border-top-left-radius]="i%2!=0 && i!=0? '10px':0">
+    <div class="image">
+        <i class="fa-regular fa-heart"></i>
+        <img [src]="product.images[0].main" [alt]="product.name">
+    </div>
+    <div class="description">
+        <p class="category">{{product.category}}</p>
+        <p class="name">{{product.name}}</p>
+        <div class="product-footer">
+            <div class="rating"><i class="fa fa-star"></i><span>{{product.rating}}</span></div>
+            <span class="price">${{product.price}}</span>
+        </div>
+    </div>
+</div>
