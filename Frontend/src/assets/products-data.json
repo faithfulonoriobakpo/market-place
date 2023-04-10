@@ -2,7 +2,7 @@
     {
         "name": "Zara Men's Striped Short Sleeve T-Shirt",
         "description": "Relaxed fit shirt made of viscose and linen blend fabric. Camp collar and short sleeves. Button-up front.",
-        "images": [{"main":"images/stripedshirt1.jpeg","icon":"images/stripedshirtxx1.jpeg"},{"main":"images/stripedshirt2.jpeg","icon":"images/stripedshirtxx2.jpeg"},{"main":"images/stripedshirt3.jpeg","icon":"images/stripedshirtxx3.jpeg"}],
+        "images": [{"main":"assets/images/stripedshirt1.jpeg","icon":"assets/images/stripedshirtxx1.jpeg"},{"main":"assets/images/stripedshirt2.jpeg","icon":"assets/images/stripedshirtxx2.jpeg"},{"main":"assets/images/stripedshirt3.jpeg","icon":"assets/images/stripedshirtxx3.jpeg"}],
         "price": 35.00,
         "quantity": 10,
         "rating": 4.9
@@ -10,7 +10,7 @@
     {
         "name": "Zara Men's Beach Short Sleeve T-Shirt",
         "description": "Relaxed fit shirt with a camp collar and short sleeves. Split hem and a button-up front.",
-        "images": [{"main":"images/beachshirt1.jpeg","icon":"images/beachshirtxx1.jpeg"},{"main":"images/beachshirt2.jpeg","icon":"images/beachshirtxx2.jpeg"},{"main":"images/beachshirt3.jpeg","icon":"images/beachshirtxx3.jpeg"}],
+        "images": [{"main":"assets/images/beachshirt1.jpeg","icon":"assets/images/beachshirtxx1.jpeg"},{"main":"assets/images/beachshirt2.jpeg","icon":"assets/images/beachshirtxx2.jpeg"},{"main":"assets/images/beachshirt3.jpeg","icon":"assets/images/beachshirtxx3.jpeg"}],
         "price": 40.00,
         "quantity": 10,
         "rating": 4.5
@@ -18,7 +18,7 @@
     {
         "name": "Zara Men's Textured Knit Polo Shirt",
         "description": "Knit polo-style shirt made of spun cotton fabric. Collar with open front. Short sleeves. Ribbed trims.",
-        "images": [{"main":"images/knitpolo1.jpeg","icon":"images/knitpoloxx1.jpeg"},{"main":"images/knitpolo2.jpeg","icon":"images/knitpoloxx2.jpeg"},{"main":"images/knitpolo3.jpeg","icon":"images/knitpoloxx3.jpeg"}],
+        "images": [{"main":"assets/images/knitpolo1.jpeg","icon":"assets/images/knitpoloxx1.jpeg"},{"main":"assets/images/knitpolo2.jpeg","icon":"assets/images/knitpoloxx2.jpeg"},{"main":"assets/images/knitpolo3.jpeg","icon":"assets/images/knitpoloxx3.jpeg"}],
         "price": 33.50,
         "quantity": 10,
         "rating": 4.7
@@ -26,7 +26,7 @@
     {
         "name": "Zara Men's Polo Shirt with Mercerised Finish",
         "description": "Polo shirt made of cotton with a mercerised finish. Featuring a lapel collar with front button fastening and long sleeves.",
-        "images": [{"main":"images/PoloLS1.jpeg","icon":"images/PoloLSxx1.jpeg"},{"main":"images/PoloLS2.jpeg","icon":"images/PoloLSxx2.jpeg"},{"main":"images/PoloLS3.jpeg","icon":"images/PoloLSxx3.jpeg"}],
+        "images": [{"main":"assets/images/PoloLS1.jpeg","icon":"assets/images/PoloLSxx1.jpeg"},{"main":"assets/images/PoloLS2.jpeg","icon":"assets/images/PoloLSxx2.jpeg"},{"main":"assets/images/PoloLS3.jpeg","icon":"assets/images/PoloLSxx3.jpeg"}],
         "price": 22.00,
         "quantity": 10,
         "rating": 4.8
