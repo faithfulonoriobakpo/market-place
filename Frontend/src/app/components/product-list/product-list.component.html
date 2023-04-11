@@ -5,7 +5,7 @@
     </div>
     <div id="product-list">
         <div class="product-list-item" *ngFor="let product of products; let i = index ">
-            <app-product [product]="product"></app-product>
+            <app-product [product]="product" [i]="i"></app-product>
         </div>
     </div>
 </div>
