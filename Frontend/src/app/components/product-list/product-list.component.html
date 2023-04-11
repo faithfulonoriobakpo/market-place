@@ -5,7 +5,9 @@
     </div>
     <div id="product-list">
         <div class="product-list-item" *ngFor="let product of products; let i = index ">
-            <app-product [product]="product" [i]="i"></app-product>
+            <a [routerLink]="['/products', product.id]">
+                <app-product [product]="product" [i]="i"></app-product>
+            </a>
         </div>
     </div>
 </div>
