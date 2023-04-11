@@ -19,6 +19,11 @@
 
         .product-list-item {
             width: calc(50% - 10px);
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
     }
 }
