@@ -6,7 +6,7 @@ ngb-carousel {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 600px; /* Maximum width of the menu */
+        width: 100%; /* Maximum width of the menu */
 
         .middle-menu-item {
             text-decoration: none;
