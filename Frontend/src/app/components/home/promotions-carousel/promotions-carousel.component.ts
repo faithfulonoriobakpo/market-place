@@ -15,7 +15,7 @@ export class PromotionsCarouselComponent {
       imgStyle:{height: '120px', 'margin-left': 'auto', width: '220px'},
       infoStyle:{flex: 1,'padding-bottom':'20px','margin-right':'5px', 'font-size': '30px'},
       tag: '#FASHION DAY',
-      topic: '80% OFF',
+      topic: '80%OFF',
       description: 'Discover fashion that suits to your style'
     },
     {
