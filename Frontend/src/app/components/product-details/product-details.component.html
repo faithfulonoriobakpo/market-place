@@ -3,7 +3,7 @@
         <div id="nav">
             <a class="nav-links" routerLink="/"><i class="fa-solid fa-chevron-left" id="back-to-home"></i></a>
             <div id="right-options">
-                <a class="nav-links"><i class="fa-regular fa-heart"></i></a>
+                <a class="nav-links" (click)="like()"><i *ngIf="!liked" class="fa-regular fa-heart"></i><i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'"></i></a>
                 <a class="nav-links"><i class="fa-solid fa-share-nodes"></i></a>
                 <a class="nav-links"><app-shopping-basket></app-shopping-basket></a>
             </div>

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product/product.service';
+import { LikeService } from 'src/app/services/like/like.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -34,6 +35,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
+    private likeService: LikeService
   ) {}
 
   ngOnInit(): void {
@@ -50,6 +52,7 @@ export class ProductDetailsComponent implements OnInit {
           this.selectedProductImage = this.product.images[0].main;
           this.productDescription = this.product.description.split('.');
           this.productDescription.pop();
+          this.liked = this.likeService.isLiked(this.id);
         },
         error: (err) => console.log(err),
       });
@@ -64,7 +67,17 @@ export class ProductDetailsComponent implements OnInit {
     }, 250);
   }
 
-  aboutOrReview():void{
+  like(): void {
+    if(this.liked){
+      this.likeService.unlikeProduct(this.id);
+      this.liked = false;
+    }else {
+      this.likeService.likeProduct(this.id);
+      this.liked = true;
+    }
+  }
+
+  aboutOrReview(): void {
     this.aboutActive = this.aboutActive? false : true;
   }
 }
