@@ -16,7 +16,7 @@
     
             .nav-links {
                 text-decoration: none;
-                color: black;
+                color: #68676c;
             }
         
             #right-options {
@@ -25,7 +25,6 @@
                 i {
                     display: block;
                     padding-left: 20px;
-                    color: #75747f;
                 }
                 app-shopping-basket {
                     @extend i;
