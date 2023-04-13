@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 
 @Component({
@@ -8,4 +8,10 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductComponent {
   @Input() product!: Product;
+  liked : boolean = false;
+
+  like(event: Event): void {
+    event.stopPropagation();
+    this.liked = this.liked? false : true;
+  }
 }

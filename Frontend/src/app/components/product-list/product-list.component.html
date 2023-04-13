@@ -5,7 +5,7 @@
     </div>
     <div id="product-list">
         <div class="product-list-item" *ngFor="let product of products;">
-            <a [routerLink]="['/products', product.id]">
+            <a>
                 <app-product [product]="product"></app-product>
             </a>
         </div>

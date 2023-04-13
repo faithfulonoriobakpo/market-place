@@ -23,6 +23,7 @@ export class ProductDetailsComponent implements OnInit {
   product!: Product;
   products!: Product[];
   id!: number;
+  liked!: boolean;
   selectedProductImage!: string;
   fadeInAnimation = 'void';
   animationTriggered: boolean = false;

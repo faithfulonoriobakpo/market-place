@@ -1,6 +1,11 @@
-<div class="product">
+<div class="product" [routerLink]="['/products', product.id]">
     <div class="image" [style.border-top-left-radius]="product.id%2!=0 && product.id!=0? 0:'10px'">
-        <i class="fa-regular fa-heart"></i>
+        <a (click)="like($event)">
+            <i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'">
+            </i>
+            <i *ngIf="!liked" class="fa-regular fa-heart">
+            </i>
+        </a>
         <img [src]="product.images[0].main" [alt]="product.name">
     </div>
     <div class="description">
