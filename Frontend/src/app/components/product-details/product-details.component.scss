@@ -26,6 +26,10 @@
                     display: block;
                     padding-left: 20px;
                 }
+                app-shopping-basket {
+                    @extend i;
+                    margin-top: -7px;
+                }
             }
         }
     }
