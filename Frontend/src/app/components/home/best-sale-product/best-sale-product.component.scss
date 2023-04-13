@@ -1,0 +1,18 @@
+#best-sale-product {
+    background: #fbfbfb;
+    padding: 10px 20px 20px 20px;
+
+    #header-see-more-wrap {
+        position: sticky !important;
+        position: -webkit-sticky;
+        top: 80px !important;
+        z-index: 5;
+        padding: 15px 0px 0px 0px;
+        background: #fbfbfb;
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: #59ac97;
+        }
+    }
+}
