@@ -1,0 +1,13 @@
+span.basket {
+    position: relative;
+    .number-of-items {
+        color: white;
+        background: #e45a86;
+        position: absolute;
+        top: -5px;
+        left: 12px;
+        font-size: 8px;
+        padding: 1px 6px;
+        border-radius: 5px;
+    }
+}
