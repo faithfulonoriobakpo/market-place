@@ -1,4 +1,4 @@
-<div class="product" [routerLink]="['/products', product.id]">
+<div class="product">
     <div class="image" [style.border-top-left-radius]="product.id%2!=0 && product.id!=0? 0:'10px'">
         <a (click)="like($event)">
             <i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'">
