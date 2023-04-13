@@ -15,7 +15,8 @@ import { BestSaleProductComponent } from './components/home/best-sale-product/be
 import { RecommendationComponent } from './components/product-details/recommendation/recommendation.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { WindowScrollDirective } from './directives/window-scroll.directive';
+import { WindowScrollDirective } from './directives/window-scroll/window-scroll.directive';
+import { ShoppingBasketComponent } from './components/shopping-basket/shopping-basket.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { WindowScrollDirective } from './directives/window-scroll.directive';
     RecommendationComponent,
     HomeComponent,
     WindowScrollDirective,
+    ShoppingBasketComponent,
   ],
   imports: [
     BrowserModule,
