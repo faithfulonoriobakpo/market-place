@@ -14,6 +14,8 @@ import { PromotionsCarouselComponent } from './components/home/promotions-carous
 import { BestSaleProductComponent } from './components/home/best-sale-product/best-sale-product.component';
 import { RecommendationComponent } from './components/product-details/recommendation/recommendation.component';
 import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WindowScrollDirective } from './directives/window-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { HomeComponent } from './components/home/home.component';
     BestSaleProductComponent,
     RecommendationComponent,
     HomeComponent,
+    WindowScrollDirective,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbCarouselModule,
     HttpClientModule
