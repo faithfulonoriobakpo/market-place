@@ -1,19 +1,21 @@
-<div class="product">
-    <div class="image" [style.border-top-left-radius]="product.id%2!=0 && product.id!=0? 0:'10px'">
-        <a (click)="like($event)">
-            <i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'">
-            </i>
-            <i *ngIf="!liked" class="fa-regular fa-heart">
-            </i>
-        </a>
-        <img [src]="product.images[0].main" [alt]="product.name">
-    </div>
-    <div class="description">
-        <p class="category">{{product.category}}</p>
-        <p class="name">{{product.name}}</p>
-        <div class="product-footer">
-            <div class="rating"><i class="fa fa-star"></i><span>{{product.rating}} | 2346</span></div>
-            <span class="price">${{product.price.toFixed(2)}}</span>
+<a [@ripple] (click)="route(product.id)">
+    <div class="product">
+        <div class="image" [style.border-top-left-radius]="product.id%2!=0 && product.id!=0? 0:'10px'">
+            <a (click)="like($event)">
+                <i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'">
+                </i>
+                <i *ngIf="!liked" class="fa-regular fa-heart">
+                </i>
+            </a>
+            <img [src]="product.images[0].main" [alt]="product.name">
+        </div>
+        <div class="description">
+            <p class="category">{{product.category}}</p>
+            <p class="name">{{product.name}}</p>
+            <div class="product-footer">
+                <div class="rating"><i class="fa fa-star"></i><span>{{product.rating}} | 2346</span></div>
+                <span class="price">${{product.price.toFixed(2)}}</span>
+            </div>
         </div>
     </div>
-</div>
+</a>

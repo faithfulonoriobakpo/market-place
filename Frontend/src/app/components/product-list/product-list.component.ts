@@ -9,4 +9,7 @@ import { Product } from 'src/app/models/Product';
 export class ProductListComponent {
   @Input() name!: string;
   @Input() products!: Product[];
+
+  constructor() {}
+
 }
