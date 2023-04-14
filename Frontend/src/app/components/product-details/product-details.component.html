@@ -1,69 +1,71 @@
-<div id="product-details-page">
-    <div id="top-bar">
-        <div id="nav">
-            <a class="nav-links" routerLink="/"><i class="fa-solid fa-chevron-left" id="back-to-home"></i></a>
-            <div id="right-options">
-                <a class="nav-links" (click)="like()"><i *ngIf="!liked" class="fa-regular fa-heart"></i><i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'"></i></a>
-                <a class="nav-links"><i class="fa-solid fa-share-nodes"></i></a>
-                <a class="nav-links"><app-shopping-basket></app-shopping-basket></a>
+<div [@openClose]>
+    <div id="product-details-page">
+        <div id="top-bar">
+            <div id="nav">
+                <a class="nav-links" routerLink="/"><i class="fa-solid fa-chevron-left" id="back-to-home"></i></a>
+                <div id="right-options">
+                    <a class="nav-links" (click)="like()"><i *ngIf="!liked" class="fa-regular fa-heart"></i><i *ngIf="liked" class="fa-solid fa-heart" [style.color]="'#e55986'"></i></a>
+                    <a class="nav-links"><i class="fa-solid fa-share-nodes"></i></a>
+                    <a class="nav-links"><app-shopping-basket></app-shopping-basket></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="product-view">
-        <div id="thumbnail-gallery">
-            <div class="thumbnails" *ngFor="let image of product?.images" (click)="selectImage(image.main)">
-                <img [src]="image?.icon">
+        <div id="product-view">
+            <div id="thumbnail-gallery">
+                <div class="thumbnails" *ngFor="let image of product?.images" (click)="selectImage(image.main)">
+                    <img [src]="image?.icon">
+                </div>
             </div>
+            <div id="main"><img [src]="selectedProductImage" alt="Product Photo" [@fadeIn]="animationTriggered?fadeInAnimation:null"></div>
         </div>
-        <div id="main"><img [src]="selectedProductImage" alt="Product Photo" [@fadeIn]="animationTriggered?fadeInAnimation:null"></div>
-    </div>
-    <div id="details">
-        <span id="store">zara</span>
-        <h5 id="product-name">{{product.name}}</h5>
-        <div id="rating">
-            <div><i class="fa fa-star"></i> {{product.rating}} Ratings</div>
-            <div class="dots">.</div>
-            <div>2.3k+ Reviews</div>
-            <div class="dots">.</div>
-            <div>2.9k+ Sold</div>
+        <div id="details">
+            <span id="store">zara</span>
+            <h5 id="product-name">{{product.name}}</h5>
+            <div id="rating">
+                <div><i class="fa fa-star"></i> {{product.rating}} Ratings</div>
+                <div class="dots">.</div>
+                <div>2.3k+ Reviews</div>
+                <div class="dots">.</div>
+                <div>2.9k+ Sold</div>
+            </div>
+
+            <div id="about-review">
+                <a id="about" (click)="aboutOrReview()" [style.color]="aboutActive? '#54a18e':'#8a8a91' ">
+                    <p>About Item</p>
+                    <div class="underline" [style.background-color]="aboutActive? '#54a18e':'#8a8a91' "></div>
+                </a>
+                <a id="review" (click)="aboutOrReview()" [style.color]="aboutActive? '#8a8a91':'#54a18e' ">
+                    <p>Reviews</p>
+                    <div class="underline" [style.background-color]="aboutActive? '#8a8a91':'#54a18e' "></div>
+                </a>
+            </div>
+            <div id="info">
+                <p class="info-item">Brand:<span>Brand</span></p>
+                <p class="info-item">Color:<span>Color</span></p>
+                <p class="info-item">Category:<span>Category</span></p>
+                <p class="info-item">Material:<span>Material</span></p>
+                <p class="info-item">Condition:<span>Condition</span></p>
+                <p class="info-item">Weight:<span>100 g</span></p>
+            </div>
+            <hr>
         </div>
 
-        <div id="about-review">
-            <a id="about" (click)="aboutOrReview()" [style.color]="aboutActive? '#54a18e':'#8a8a91' ">
-                <p>About Item</p>
-                <div class="underline" [style.background-color]="aboutActive? '#54a18e':'#8a8a91' "></div>
-            </a>
-            <a id="review" (click)="aboutOrReview()" [style.color]="aboutActive? '#8a8a91':'#54a18e' ">
-                <p>Reviews</p>
-                <div class="underline" [style.background-color]="aboutActive? '#8a8a91':'#54a18e' "></div>
-            </a>
+        <div id="description">
+            <h6>Description:</h6>
+            <ul class="description-list">
+                <li class="description-list-item" *ngFor="let description of productDescription">{{description}}</li>
+            </ul>
         </div>
-        <div id="info">
-            <p class="info-item">Brand:<span>Brand</span></p>
-            <p class="info-item">Color:<span>Color</span></p>
-            <p class="info-item">Category:<span>Category</span></p>
-            <p class="info-item">Material:<span>Material</span></p>
-            <p class="info-item">Condition:<span>Condition</span></p>
-            <p class="info-item">Weight:<span>100 g</span></p>
-        </div>
-        <hr>
     </div>
 
-    <div id="description">
-        <h6>Description:</h6>
-        <ul class="description-list">
-            <li class="description-list-item" *ngFor="let description of productDescription">{{description}}</li>
-        </ul>
-    </div>
-</div>
-
-<div id="buy-now">
-    <div id="price">
-        <span id="text">Total Price</span>
-        <span id="amount">${{product.price}}</span>
-    </div>
-    <div id="buy-now-pill">
-        <span id="icon"><i class="fa fa-basket-shopping"> 1</i></span>
-        <span id="text">Buy Now</span>
+    <div id="buy-now">
+        <div id="price">
+            <span id="text">Total Price</span>
+            <span id="amount">${{product.price}}</span>
+        </div>
+        <div id="buy-now-pill">
+            <span id="icon"><i class="fa fa-basket-shopping"> 1</i></span>
+            <span id="text">Buy Now</span>
+        </div>
     </div>
 </div>

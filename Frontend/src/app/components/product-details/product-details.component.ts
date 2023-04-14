@@ -4,20 +4,13 @@ import { Subject, takeUntil } from 'rxjs';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product/product.service';
 import { LikeService } from 'src/app/services/like/like.service';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { openClose } from 'src/app/animations/open-close';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss'],
-  animations: [
-    trigger('fadeIn', [
-      state('void', style({ opacity: 0 })),
-      transition(':enter', [
-        animate('0.3s ease-in-out', style({ opacity: 1 }))
-      ])
-    ])
-  ]
+  animations: [openClose]
 })
 export class ProductDetailsComponent implements OnInit {
   private ngUnsubscribe = new Subject<void>();

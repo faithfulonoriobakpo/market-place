@@ -1,16 +1,9 @@
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, group, transition, keyframes } from '@angular/animations';
 
 export const openClose = trigger('openClose', [
-  state('open', style({
-    transform: 'scale(1)'
-  })),
-  state('closed', style({
-    transform: 'scale(0)'
-  })),
-  transition('open => closed', [
-    animate('0.5s ease-in-out')
-  ]),
-  transition('closed => open', [
-    animate('0.5s ease-in-out')
-  ])
+    transition(':enter', [
+        group([
+            animate('0.1s ease-in-out', style({transform: 'translate(0, -100%)', opacity: 0.3})),
+        ])
+    ])
 ]);
