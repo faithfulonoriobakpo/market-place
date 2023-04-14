@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,HammerModule } from '@angular/platform-browser';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +37,7 @@ import { ShoppingBasketComponent } from './components/shopping-basket/shopping-b
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HammerModule,
     AppRoutingModule,
     NgbCarouselModule,
     HttpClientModule
