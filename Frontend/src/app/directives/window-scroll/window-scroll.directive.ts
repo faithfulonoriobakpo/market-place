@@ -9,7 +9,7 @@ export class WindowScrollDirective {
 
   @HostBinding('class.navbar-scrolled') isScrolled : boolean = false;
   @HostListener('window:scroll') onWindowScroll() {
-    this.isScrolled = window.scrollY >  0;
+    this.isScrolled = window.scrollY >  20;
   }
 
 }
