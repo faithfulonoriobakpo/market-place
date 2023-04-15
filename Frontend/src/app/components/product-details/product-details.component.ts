@@ -5,12 +5,18 @@ import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product/product.service';
 import { LikeService } from 'src/app/services/like/like.service';
 import { openClose } from 'src/app/animations/open-close';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss'],
-  animations: [openClose]
+  animations: [openClose, trigger('fadeIn', [
+    transition(':enter', [
+        style({ opacity: 0 }),
+        animate(1000)
+    ])
+])]
 })
 export class ProductDetailsComponent implements OnInit {
   private ngUnsubscribe = new Subject<void>();
