@@ -4,17 +4,17 @@ import { Subject, takeUntil } from 'rxjs';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product/product.service';
 import { LikeService } from 'src/app/services/like/like.service';
-import { openClose } from 'src/app/animations/open-close';
+import { fadeIn } from 'src/app/animations/fadeIn';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss'],
-  animations: [openClose, trigger('fadeIn', [
+  animations: [fadeIn, trigger('fadeIn', [
     transition(':enter', [
         style({ opacity: 0 }),
-        animate(1000)
+        animate(2000)
     ])
 ])]
 })
@@ -77,6 +77,6 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   aboutOrReview(): void {
-    this.aboutActive = this.aboutActive? false : true;
+    this.aboutActive = !this.aboutActive;
   }
 }
